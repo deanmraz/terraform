@@ -73,12 +73,14 @@ output "aurora_cluster_id" {
   value = "${aws_rds_cluster.rds_aurora.id}"
 }
 
-// usage 
-// update the path
-// changes variables, listed above
-// make sure to configure the ENVIRONMENT variable TF_VAR_DB_PASSWORD so you don't commit the password to git
+/**
+  Usage
+  1. update the path
+  2. changes variables, listed above
+  3. make sure to configure the ENVIRONMENT variable TF_VAR_DB_PASSWORD so you don't commit the password to git
 module "aurora-serverless" {
   source = "../path/to/module/aurora-serverless"
   name = "demo"
   auto_pause = true // this will go to sleep once its idle good for testing purposes in production will want to set this false
 }
+*/
